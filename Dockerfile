@@ -9,4 +9,4 @@ RUN mvn clean package -DskipTests
 FROM eclipse-temurin:17
 WORKDIR /app
 COPY --from=builder /app/target/profac-0.0.1-SNAPSHOT.jar Profac_backend.jar
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "Profac_backend.jar"]
